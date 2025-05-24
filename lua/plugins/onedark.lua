@@ -1,7 +1,7 @@
 return {
   {
     "navarasu/onedark.nvim",
-    priority = 1000, -- Faz o tema carregar antes dos outros plugins
+    priority = 900, -- Faz o tema carregar antes dos outros plugins
     config = function()
       require("onedark").setup({
         style = "cool", -- Escolha entre dark, darker, cool, deep, warm, warmer

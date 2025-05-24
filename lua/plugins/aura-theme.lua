@@ -3,7 +3,7 @@ return {
   {
     "baliestri/aura-theme",
     lazy = false,
-    priority = 1000,
+    priority = 900,
     config = function(plugin)
       vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
       --vim.cmd([[colorscheme aura-dark]])
