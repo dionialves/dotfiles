@@ -11,3 +11,7 @@ vim.opt.number = true
 vim.opt.relativenumber = false
 
 vim.opt.clipboard = "unnamedplus"
+
+-- Força o agente do Lombok globalmente para o JDTLS
+vim.env.JDTLS_JVM_ARGS = "-javaagent:"
+  .. vim.fn.expand("$HOME/.m2/repository/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar")
