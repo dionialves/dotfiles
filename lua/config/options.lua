@@ -14,4 +14,12 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Força o agente do Lombok globalmente para o JDTLS
 vim.env.JDTLS_JVM_ARGS = "-javaagent:"
-  .. vim.fn.expand("$HOME/.m2/repository/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar")
+  .. vim.fn.expand("$HOME/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar")
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = "pt_br"
+  end,
+})
